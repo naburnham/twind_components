@@ -7,5 +7,25 @@
 {% endblock %}
 
 {% block content %}
-<p>Testing</p>
+
+{% set options = data[0].keys() %}
+<table class="w-full table-auto">
+    <thead>
+        <tr>
+            {% for opt in options %}
+            <th>{{ opt }}</th>
+            {% endfor %}
+        </tr>
+    </thead>
+    <tbody>
+    {% for d in data %}
+        <tr>
+            {% for opt in options %}
+            <td>{{ d[opt] }}</td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
 {% endblock %}

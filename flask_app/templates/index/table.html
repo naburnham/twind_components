@@ -10,23 +10,25 @@
 
 {% set options = data[0].keys() %}
 
-<table class="w-full table-auto">
-    <thead class="bg-gray-600 border-b-2 border-b-gray-200">
-        <tr>
-            {% for opt in options %}
-            <th class="first:rounded-tl-md last:rounded-tr-md p-3 text-gray-50 text-md font-semibold tracking-wide text-left">{{ opt }}</th>
-            {% endfor %}
-        </tr>
-    </thead>
-    <tbody class="divide-y divide-solid divide-gray-600">
-    {% for d in data %}
-        <tr class="odd:bg-white even:bg-gray-50">
-            {% for opt in options %}
-            <td class="p-3 text-sm text-gray-700">{{ d[opt] }}</td>
-            {% endfor %}
-        </tr>
-    {% endfor %}
-    </tbody>
-</table>
+<div class="overflow-auto rounded-lg shadow">
+    <table class="w-full table-auto">
+        <thead class="bg-gray-600 border-b-2 border-b-gray-200">
+            <tr>
+                {% for opt in options %}
+                <th class="first:rounded-tl-md last:rounded-tr-md p-3 text-gray-50 text-md font-semibold tracking-wide text-left">{{ opt }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody class="divide-y divide-solid divide-gray-600">
+        {% for d in data %}
+            <tr class="odd:bg-white even:bg-gray-50">
+                {% for opt in options %}
+                <td class="p-3 text-sm text-gray-700">{{ d[opt] }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
 
 {% endblock %}

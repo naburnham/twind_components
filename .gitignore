@@ -15,3 +15,6 @@ htmlcov/
 
 # Node Dependencies
 /node_modules
+
+# Tailwind Output Files
+flask_app/static/output.css

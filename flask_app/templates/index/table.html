@@ -9,11 +9,11 @@
 {% block content %}
 
 {% set options = data[0].keys() %}
-<table class="w-full table-auto">
-    <thead>
+<table class="w-3/4 table-auto">
+    <thead class="border border-black">
         <tr>
             {% for opt in options %}
-            <th>{{ opt }}</th>
+            <th class="p-3 text-md font-semibold">{{ opt }}</th>
             {% endfor %}
         </tr>
     </thead>

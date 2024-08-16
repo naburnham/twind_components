@@ -9,19 +9,20 @@
 {% block content %}
 
 {% set options = data[0].keys() %}
-<table class="w-full table-auto">
-    <thead class="border border-black">
+
+<table class="w-full table-auto border-separate">
+    <thead class="bg-gray-600 border-b-2 border-b-gray-200">
         <tr>
             {% for opt in options %}
-            <th class="text-md font-semibold">{{ opt }}</th>
+            <th class="first:rounded-tl-md last:rounded-tr-md p-3 text-md font-semibold tracking-wide text-left">{{ opt }}</th>
             {% endfor %}
         </tr>
     </thead>
     <tbody>
     {% for d in data %}
-        <tr>
+        <tr class="odd:bg-white even:bg-gray-50">
             {% for opt in options %}
-            <td class="text-sm">{{ d[opt] }}</td>
+            <td class="p-3 text-sm text-gray-700">{{ d[opt] }}</td>
             {% endfor %}
         </tr>
     {% endfor %}

@@ -10,7 +10,7 @@
 
 {% set options = data[0].keys() %}
 
-<table class="w-full table-auto border-separate">
+<table class="w-full table-auto">
     <thead class="bg-gray-600 border-b-2 border-b-gray-200">
         <tr>
             {% for opt in options %}
@@ -18,7 +18,7 @@
             {% endfor %}
         </tr>
     </thead>
-    <tbody>
+    <tbody class="divide-y divide-solid divide-gray-600">
     {% for d in data %}
         <tr class="odd:bg-white even:bg-gray-50">
             {% for opt in options %}

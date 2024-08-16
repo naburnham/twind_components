@@ -12,3 +12,6 @@ instance/
 .pytest_cache/
 .coverage
 htmlcov/
+
+# Node Dependencies
+/node_modules

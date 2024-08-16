@@ -1,1 +1,14 @@
+# Virtual Environment
 .venv
+
+# Python Cache files
+*.pyc
+__pycache__/
+
+# Flask Generated Instance Folder
+instance/
+
+# Pytest and Coverage Files
+.pytest_cache/
+.coverage
+htmlcov/

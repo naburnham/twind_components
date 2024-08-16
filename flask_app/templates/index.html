@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Component Links{% endblock %}
+
+{% block header %}List of Components{% endblock %}
+
+{% block content %}
+<nav>
+    <ul>
+        <li><a href="{{ url_for('components.table') }}">Table</a></li>
+        <li><a href="{{ url_for('components.pagination') }}">Pagination</a></li>
+    </ul>
+</nav>
+{% endblock %}

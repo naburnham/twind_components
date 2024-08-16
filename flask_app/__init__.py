@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask, redirect, url_for
+from flask import Flask, render_template
 
 def create_app():
     app = Flask(__name__, instance_relative_config=True)
@@ -13,11 +13,11 @@ def create_app():
     except OSError:
         pass
 
-    from . import home
-    app.register_blueprint(home.bp)
+    from . import components
+    app.register_blueprint(components.bp)
 
     @app.route('/')
     def home():
-        return redirect(url_for("home.index"))
+        return render_template('index.html')
 
     return app

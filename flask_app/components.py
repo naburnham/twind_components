@@ -11,3 +11,7 @@ def table():
 def pagination():
     max_pages: int = 8
     return render_template('components/pagination.html', max_pages=max_pages)
+
+@bp.route('/spinner')
+def spinner():
+    return render_template('components/spinner.html')

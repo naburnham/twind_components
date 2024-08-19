@@ -5,5 +5,15 @@
 {% block header %}Example for Pagination{% endblock %}
 
 {% block content %}
-    {{ max_pages }}
+<div class="pt-10 mt-10">
+    <nav class="">
+        <ul class="list-style-none flex">
+        <li><a href="" class="p-2 hover:ring-2 hover:ring-red-500 border rounded-md mr-2"><span>Previous</span></a></li>
+        {% for page in range(max_pages) %}
+            <li><a href="" class="p-2 mr-2 hover:ring-2 hover:ring-red-500 border rounded-md"><span>{{page + 1}}</span></a></li>
+        {% endfor %}
+        <li><a href="" class="p-2 hover:ring-2 hover:ring-red-500 border rounded-md"><span>Next</span></a></li>
+        </ul>
+    </nav>
+</div>
 {% endblock %}
